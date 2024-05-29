@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Calendas+Plus:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+@import url('components/reset.css');
+@import url('components/animations.css');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background: #f0f4f8;
+    font-family: Montserrat, sans-serif;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #003366;
+    color: white;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.hero {
+    background: url("../../hero.jpg") no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 1; /* Ensure it is above the overlay */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #00509e;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.about-us, .products, .contact {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.about-us h2, .products h2, .contact h2 {
+    font-size: 36px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.about-us p, .contact p {
+    font-size: 18px;
+    color: #666;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    width: 30%;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 24px;
+    color: #00509e;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .product-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .cta-btn {
+        font-size: 18px;
+    }
+}
